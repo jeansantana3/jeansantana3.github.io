@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJJ PURPOSE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="logo1.png">
+	<script src="cambio.js"></script>
+	
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: black;
+		}
+
+		.container {
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: black;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.form-group {
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: white;
+		}
+
+		.form-group input[type="text"],
+		.form-group input[type="password"] {
+			width: 100%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		.form-group input[type="submit"] {
+			width: auto;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			background-color: #4caf50;
+			color: white;
+			cursor: pointer;
+		}
+
+		.form-group input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+		.tabcontent2 {
+			display: none;
+			padding: 20px;
+			background-color: black;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+
+		.active2 {
+			display: block;
+		}
+	</style>
+
+    <style>
+        div {
+            background-color: #000000;
+        }
+
+        /* CSS for the button container */
+        .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: transparent;
+        }
+
+        /* CSS for the button */
+        .round-corner-square-button {
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        /* CSS for the Jumpsuits button */
+        #jumpsuits-button {
+            border: 8px solid #000000;
+            background-image: url("sqrimg2.png");
+            background-color: #6f42c1;
+        }
+
+        /* CSS for the Dresses button */
+        #dresses-button {
+            border: 8px solid #000000;
+            background-image: url("sqrimg1.png");
+            background-color: #e83e8c;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="tab">
+		<div class="bg-slideshow">
+			<img src="img11.png" alt="background image 1">
+			<img src="img22.png" alt="background image 2">
+			<img src="img33.png" alt="background image 3">
+			<img src="img44.png" alt="background image 4">
+		</div>
+
+		<img src="logo1.png" class="logo1" style="float: left;">
+
+		<button class="tablinks" onclick="openTab(event, 'Home')"><b><font color="white">| Home |</font></b></button>
+		<button class="tablinks" onclick="openTab(event, 'Shop')"><b><font color="white">| Shop |</font></b></button>
+		<button class="tablinks" onclick="openTab(event, 'About us')"><b><font color="white">| About us |</font></b></button>
+		<button class="tablinks" onclick="openTab(event, 'Info')"><b><font color="white">| Info |</font></b></button>
+		<button class="tablinks" onclick="openTab(event, 'Login / Sign-up')"><b><font color="white">| Login / Sign-up |</font></b></button>
+		<button class="tablinks" onclick="openTab(event, 'Showcase')"><b><font color="white">| Showcase |</font></b></button>
+
+		
+
+		<!-- Home -->
+		<div id="Home" class="tabcontent"></div>
+
+		<!-- Shop -->
+		<div id="Shop" class="tabcontent">
+			<div id="myBtnContainer">
+				<button class="btn active" onclick="filterSelection('all')"> | Show all |</button>
+				<button class="btn" onclick="filterSelection('Long')"> | Long |</button>
+				<button class="btn" onclick="filterSelection('Short')"> | Short |</button>
+				<button class="btn" onclick="filterSelection('Casual')"> | Casual |</button>
+				<button class="btn" onclick="filterSelection('Formal')"> | Formal |</button>
+				<button class="btn" onclick="filterSelection('Semi-Formal')"> | Semi-Formal |</button>
+			</div>
+
+			<!-- Portfolio Gallery Grid -->
+			<div class="row">
+				<div class="columna Long">
+					<div class="content">
+						<img src="item1.png" alt="Mountains" style="width:100%">
+						<h4>Colorful Long Dress</h4>
+						<p>699$</p>
+					</div>
+				</div>
+				<div class="columna Short">
+					<div class="content">
+						<img src="item7.png" alt="Car" style="width:100%">
+						<h4>Hot Pink 2-Piece</h4>
+						<p>850$</p>
+					</div>
+				</div>
+				<div class="columna Casual">
+					<div class="content">
+						<img src="item2.png" alt="Lights" style="width:100%">
+						<h4>Light Pink Long Dress</h4>
+						<p>899$</p>
+					</div>
+				</div>
+				<div class="columna Casual">
+					<div class="content">
+						<img src="item5.png" alt="Nature" style="width:100%">
+						<h4>Light Blue Floral Print</h4>
+						<p>415$</p>
+					</div>
+				</div>
+				<div class="columna Casual">
+					<div class="content">
+						<img src="item6.png" alt="Car" style="width:100%">
+						<h4>White Long Dress</h4>
+						<p>500$</p>
+					</div>
+				</div>
+				<div class="columna Casual">
+					<div class="content">
+						<img src="item8.png" alt="Car" style="width:100%">
+						<h4>Orange Long-Sleeve Dress</h4>
+						<p>700$</p>
+					</div>
+				</div>
+				<div class="columna Formal">
+					<div class="content">
+						<img src="item3.png" alt="People" style="width:100%">
+						<h4>Green Floral Print Dress</h4>
+						<p>699$</p>
+					</div>
+				</div>
+				<div class="columna Formal">
+					<div class="content">
+						<img src="item9.png" alt="People" style="width:100%">
+						<h4>Formal Pink Long Dress</h4>
+						<p>1050$</p>
+					</div>
+				</div>
+				<div class="columna Semi-Formal">
+					<div class="content">
+						<img src="item4.png" alt="People" style="width:100%">
+						<h4>Silk Pink Long Dress</h4>
+						<p>700$</p>
+					</div>
+				</div>
+			</div>
+			<!-- END GRID -->
+		</div>
+
+		<!-- About us -->
+		<div id="About us" class="tabcontent">
+			<br><br>
+			<center>
+			<h2 style="color: white;">About us</h2>
+			<table class="table1">
+				
+				<ul>
+				<tr>
+					
+				  	<td class="textabt"><li>We’re a Dominican-based enterprise called AJJ Purpose, which goal is to propose a better feminine clothing style in the Dominican Republic and the world. Since we are focusing on Formal Women's clothing, such as high-quality formal dresses. We strongly consider that the Dominican Republic is in a necessity for different clothing styles, and we want to change it. In order to do this we’ll spread our message to encourage Dominican women's costumer to invest in our high-quality dresses all around the world.</td>
+				  		</li>
+					
+				  	<td ><img class="abtus" src="abtus.png"></td>
+				</tr>
+				</ul>
+
+				<ul>
+				<tr>
+					<td class="textabt"><li>At AJJ Purpose, we firmly believe that clothing is more than just a fashion statement; it's a reflection of one's identity and empowerment. Our mission goes beyond simply offering high-quality formal dresses; we aim to revolutionize the feminine clothing style in the Dominican Republic and the global fashion scene. Recognizing the need for diverse and innovative fashion choices in the Dominican Republic, we are determined to bring about a transformation. Through our commitment to exceptional craftsmanship, attention to detail, and elegant designs, we strive to inspire Dominican women to embrace their unique style and make a statement of confidence and sophistication. By spreading our message and showcasing our exquisite dresses to customers worldwide, we aspire to become a beacon of style and empowerment for women everywhere. Together, let's redefine the concept of feminine fashion and create a lasting impact on the world.</td>
+						</li>
+					
+					<td ><img class="abtus" src="ABTUS2.PNG"></td>
+				</tr>
+				</ul>
+
+
+
+			  </table>
+			</center>
+		</div>
+
+		<!-- Slides -->
+		<div id="Info" class="tabcontent">
+			<!-- Slideshow container -->
+			
+<div class="slideshow-container">
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+	  <img src="promise.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides fade">
+	  <img src="returns.png" style="width:100%">
+	</div>
+  
+  
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+	</div>
+
+
+
+	<div id="Login / Sign-up" class="tabcontent">
+
+		<div class="container">
+			<h2>Login</h2>
+			<form action="login.php" method="POST">
+
+				<div class="form-group">
+					<label for="username">E-Mail:</label>
+					<input type="text" id="username" name="username" required>
+				</div>
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Confirm Password:</label>
+					<input type="password" id="password" name="password" required>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Login" onclick="showTab()">
+				</div>
+			</form>
+		</div>
+
+	<!-- Hidden tab -->
+	<div id="successTab" class="tabcontent">
+		<h2>Login Successful!</h2>
+		<p>You've been logged in to your account successfully.</p>
+	</div>
+	
+	</div>
+
+	<div id="Showcase" class="tabcontent">
+		<br><br><br>
+		<center><iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/-xBs-sGK_so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+	<h6></h6>
+	<section></section>
+	<footer></footer>
+	<h5></h5>
+	
+</div>
+
+
+	<script>
+		function showTab() {
+			document.getElementById("successTab").style.display = "block";
+		}
+	</script>
+
+	<script>
+		function openTab(evt, tabName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+	
+</body>
+</html>
